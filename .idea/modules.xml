@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Auth.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Auth.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Libera.iml" filepath="$PROJECT_DIR$/Libera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LibraryService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LibraryService.main.iml" />
+    </modules>
+  </component>
+</project>
