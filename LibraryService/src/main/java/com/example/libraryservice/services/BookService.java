@@ -39,6 +39,11 @@ public class BookService {
             log.info("The Library user of the book with id {} has been updated -> {}", id, username);
         }
 
+        if (book.getBookName() !=null) {
+            bookFromDB.setBookName(book.getBookName());
+            log.info("The Book Name of the book with id {} has been updated -> {}", id, username);
+        }
+
         iBookRepository.save(bookFromDB);
         response.put("update_book", "true");
         log.info("Update book with id = {} -> {}", id, username);

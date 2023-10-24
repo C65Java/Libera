@@ -39,8 +39,9 @@ public class AuthorRestController {
 
     @PutMapping("{id}")
     public ResponseEntity<?> update(@RequestBody @JsonView(Views.AuthorView.Put.class) Author author,
-                                    @PathVariable Long id) {
-        return authorService.updateAuthor(author, id);
+                                    @PathVariable Long id,
+                                    @RequestParam(required = false) Long bookId) {
+        return authorService.updateAuthor(author, id, bookId);
     }
 
     @DeleteMapping("{id}")

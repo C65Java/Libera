@@ -8,3 +8,39 @@ create table users (
     last_name varchar(255) not null,
     role varchar(255) not null,
     primary key (id));
+
+create table authors (
+   id bigserial not null,
+   first_name varchar(255),
+   last_name varchar(255),
+  primary key (id));
+
+ create table books (
+     id bigserial not null,
+     user_id bigint,
+     book_name varchar(255),
+     isbn varchar(255),
+     primary key (id));
+
+ create table books_author_list (
+     author_list_id bigint not null,
+     book_list_id bigint not null);
+
+ create table library_users (
+     id bigserial not null,
+     address varchar(255),
+     first_name varchar(255),
+     last_name varchar(255),
+     primary key (id));
+
+ alter table if exists books
+     add constraint FKpitqhgghgwccl3v13oj07x1p5
+     foreign key (user_id) references library_users;
+
+ alter table if exists books_author_list
+     add constraint FKlkhmvt8tq9xjbmntxbcq4jl9
+     foreign key (author_list_id) references authors;
+
+ alter table if exists books_author_list
+     add constraint FK19mwhh4exoj0tnjlmn81s315u
+     foreign key (book_list_id) references books;
